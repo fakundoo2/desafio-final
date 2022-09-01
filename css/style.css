@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+header {
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center; }
+
+.logo {
+  padding: 10px 15px; }
+
+nav ul {
+  display: flex;
+  margin-bottom: 0%; }
+
+li {
+  background-color: #6f6f6f;
+  list-style: none;
+  padding: .3em;
+  margin: .2em;
+  border-radius: 5px; }
+
+a {
+  text-decoration: none;
+  color: #fdfdfd; }
+  a:hover {
+    color: #2c2c2c; }
+
+/*carrousel*/
+#carouselExampleControls {
+  margin: 3%; }
+
+/*GALERIA*/
+.foto-galeria {
+  padding: 10px; }
+
+/*FOOTER*/
+footer {
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: auto; }
+
+.redes {
+  display: flex; }
+
+.logo_redes {
+  margin: 10px; }
+
+/*PRODUCTOS*/
+.card-container {
+  margin: auto;
+  width: 80vw; }
+
+.card {
+  background-color: #a5a4a4;
+  padding: 15px;
+  margin: 20px auto; }
+  .card p {
+    margin: auto; }
+
+/*QUIENESSOMOS*/
+.quienessomos {
+  padding: 20px;
+  font-weight: bold;
+  background-color: aliceblue;
+  width: 90vw;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 30px; }
+
+.staff {
+  padding: 20px; }
+  .staff h2 {
+    font-size: 36px;
+    text-align: center;
+    color: aliceblue; }
+  .staff img {
+    width: 200px;
+    height: 200px; }
+
+.staff-fotos-content {
+  display: flex;
+  justify-content: space-evenly; }
+
+.staff-foto {
+  border-radius: 50%;
+  border: solid 5px #b6b6b6; }
+
+/*CONTACTO*/
+.container-contactos {
+  display: flex;
+  margin: auto;
+  justify-content: space-between; }
+
+.formulario {
+  background-color: #4765a7;
+  width: 75%;
+  padding: 5%;
+  border-radius: 5px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 6%;
+  margin-top: 6%; }
+  .formulario h2 {
+    margin-bottom: 15px; }
+
+.inputs {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; }
+
+.boton {
+  width: 120px;
+  height: 35px; }
+
+.section1, .section2 {
+  width: 40vw; }
+
+.section1 {
+  display: flex; }
+
+.mapa {
+  padding: 30px;
+  width: 400px;
+  height: 400px; }
+
+.contacto {
+  padding: 20px;
+  padding-top: 50px; }
+  .contacto p {
+    color: #fafafa;
+    font-weight: 200;
+    padding: 5px; }
+
+/*MIS COMPRAS*/
+.compras {
+  background-color: #4e4e4e;
+  width: 80vw;
+  margin: 35px  auto;
+  padding: 15px;
+  border-radius: 10px; }
+  .compras h2 {
+    color: aliceblue; }
+
+.barra-compras {
+  background-color: #b3b4b4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; }
+  .barra-compras p {
+    padding: 5px; }
+
+@media (max-width: 684px) {
+  header {
+    flex-direction: column; }
+  footer {
+    flex-direction: column; } }
