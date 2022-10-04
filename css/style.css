@@ -11,17 +11,32 @@ nav ul {
   margin-bottom: 0%; }
 
 li {
-  background-color: #6f6f6f;
+  display: flex;
   list-style: none;
-  padding: .3em;
-  margin: .2em;
-  border-radius: 5px; }
+  align-items: center; }
 
-a {
+.anim {
   text-decoration: none;
-  color: #fdfdfd; }
-  a:hover {
-    color: #2c2c2c; }
+  color: #474444;
+  padding: 10px;
+  position: relative; }
+  .anim:hover {
+    color: #556786; }
+
+.anim:after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: #494949;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: all .5s;
+  will-change: width; }
+
+.anim:hover:after {
+  width: 100%;
+  right: 0; }
 
 /*FOOTER*/
 footer {
@@ -38,36 +53,51 @@ footer {
 .logo_redes {
   margin: 10px; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+/*CARRITO*/
+.compras {
+  background-color: #4e4e4e;
+  width: 80vw;
+  margin: 35px  auto;
+  padding: 15px;
+  border-radius: 10px; }
+  .compras h2 {
+    font-size: 45px;
+    text-align: center;
+    color: aliceblue;
+    border-bottom: 3px solid aliceblue; }
 
-body {
-  background-color: #141414;
+.barra-compras {
+  background-color: #b3b4b4;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh; }
+  justify-content: space-between;
+  margin-top: 10px; }
+  .barra-compras p {
+    padding: 5px; }
 
-/*carrousel*/
-#carouselExampleControls {
-  margin: 3%; }
-
-/*GALERIA*/
-.foto-galeria {
+.carrito-list {
+  display: flex;
   padding: 10px; }
 
-/*PRODUCTOS*/
-.card-container {
-  margin: auto;
-  width: 80vw; }
+.carrito-detalles {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center; }
+  .carrito-detalles p {
+    color: aliceblue;
+    padding-left: 15px; }
 
-.card {
-  background-color: #a5a4a4;
-  padding: 15px;
-  margin: 20px auto; }
-  .card p {
-    margin: auto; }
+.carrito-foto {
+  width: 15%;
+  height: 15%; }
+
+.total {
+  display: flex;
+  justify-content: end; }
+  .total p {
+    color: aliceblue;
+    padding: 0 5%; }
 
 /*QUIENESSOMOS*/
 .quienessomos {
@@ -100,8 +130,9 @@ body {
 /*CONTACTO*/
 .container-contactos {
   display: flex;
-  margin: auto;
-  justify-content: space-between; }
+  margin: 2em;
+  justify-content: space-around;
+  align-items: center; }
 
 .formulario {
   background-color: #4765a7;
@@ -127,46 +158,64 @@ body {
   width: 120px;
   height: 35px; }
 
-.section1, .section2 {
-  width: 40vw; }
-
-.section1 {
-  display: flex; }
-
 .mapa {
   padding: 30px;
-  width: 400px;
-  height: 400px; }
+  width: 70%; }
 
 .contacto {
   padding: 20px;
-  padding-top: 50px; }
+  padding-top: 50px;
+  display: flex;
+  align-items: center; }
   .contacto p {
     color: #fafafa;
     font-weight: 200;
     padding: 5px; }
 
-/*MIS COMPRAS*/
-.compras {
-  background-color: #4e4e4e;
-  width: 80vw;
-  margin: 35px  auto;
-  padding: 15px;
-  border-radius: 10px; }
-  .compras h2 {
-    color: aliceblue; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-.barra-compras {
-  background-color: #b3b4b4;
-  border-radius: 5px;
+body {
+  background-color: #141414;
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px; }
-  .barra-compras p {
-    padding: 5px; }
+  flex-direction: column;
+  min-height: 100vh; }
+
+/*carrousel*/
+#carouselExampleControls {
+  margin: 3%; }
+
+/*GALERIA*/
+.foto-galeria {
+  padding: 10px; }
+
+/*PRODUCTOS*/
+.card-container {
+  margin: auto;
+  width: 80vw; }
+
+.card {
+  background-color: #a5a4a4;
+  padding: 15px;
+  margin: 20px auto; }
+  .card p {
+    margin: auto; }
+
+@media (max-width: 1100px) {
+  .container-contactos {
+    display: block; }
+  .cont-section1, .cont-section2 {
+    margin: auto; } }
 
 @media (max-width: 684px) {
   header {
     flex-direction: column; }
   footer {
-    flex-direction: column; } }
+    flex-direction: column; }
+  .formulario {
+    margin: auto; }
+  .staff-fotos-content {
+    display: block;
+    justify-content: space-evenly; } }

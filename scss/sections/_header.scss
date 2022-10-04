@@ -16,19 +16,28 @@ nav {
     }
 }
 
-li {
-    background-color: rgb(111, 111, 111);
+li{
+    display: flex;
     list-style: none;
-    padding: .3em;
-    margin: .2em;
-    border-radius: 5px;
+    align-items: center;
 }
 
-a {
+.anim{
     text-decoration: none;
-    color: rgb(253, 253, 253);
-
+    color: rgb(71, 68, 68);
+    padding: 10px;
+    position: relative;
     &:hover{
-        color: rgb(44, 44, 44);
+        color: rgb(85, 103, 134);
     }
+}
+
+.anim:after{
+    @include menu-animacion;
+
+}
+
+.anim:hover:after{
+    width: 100%;
+    right: 0;
 }

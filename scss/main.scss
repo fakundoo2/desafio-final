@@ -3,7 +3,10 @@
 @import './base/extend'; 
 
 @import './sections/header'; 
-@import './sections/footer'; 
+@import './sections/footer';
+@import './sections/carrito'; 
+@import './sections/quienessomos.scss'; 
+@import './sections/contacto'; 
 
 *{
     margin: 0;
@@ -45,132 +48,33 @@ body{
     }
 }
 
-/*QUIENESSOMOS*/
-.quienessomos{
-    padding: 20px;
-    font-weight: bold;
-    background-color: $color-title;
-    width: 90vw;
-    margin: auto;
-    margin-top: 40px;
-    border-radius: 30px;
-}
 
-.staff {
-    padding: 20px;
-
-    h2 {
-        @include titulo-secundario;
+@media (max-width: 1100px) {
+    .container-contactos{
+        display:block;
     }
 
-    img {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-.staff-fotos-content {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.staff-foto {
-    border-radius: 50%;
-    border: solid 5px rgb(182, 182, 182);
-}
-
-/*CONTACTO*/
-.container-contactos{
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-}
-
-.formulario{
-    background-color: rgb(71, 101, 167);
-    width: 75%;
-    padding: 5%;
-    border-radius: 5px;
-    color: $color-title;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 6%;
-    margin-top: 6%;
-
-    h2{
-        margin-bottom: 15px;
-    }
-}
-
-.inputs{
-    width: 70%;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-
-}
-
-.boton{
-    width: 120px;
-    height: 35px;
-}
-
-.section1,.section2{
-    width: 40vw;
-}
-
-.section1{
-    display: flex;
-}
-
-.mapa{
-    padding: 30px;
-    width: 400px;
-    height: 400px;
-}
-
-.contacto{
-    padding: 20px;
-    padding-top: 50px;
-
-    p{
-        color: rgb(250, 250, 250);
-        font-weight: 200;
-        padding: 5px;
-    }
-}
-
-/*MIS COMPRAS*/
-.compras{
-    background-color: rgb(78, 78, 78);
-    width: 80vw;
-    margin: 35px  auto;
-    padding: 15px;
-    border-radius: 10px;
-
-    h2{
-        color: $color-title;
-    }
-}
-
-.barra-compras{
-    background-color: rgb(179, 180, 180);
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    
-    p{
-        padding: 5px;
+    .cont-section1, .cont-section2{
+        margin: auto;
     }
 }
 
 @media (max-width: 684px) {
+
     header{
         flex-direction: column;
     }
     footer{
         flex-direction: column;
     }
+
+    .formulario{
+        margin: auto;
+    }
+    
+    .staff-fotos-content {
+        display: block;
+        justify-content: space-evenly;
+    }
+
 }
